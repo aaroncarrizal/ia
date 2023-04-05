@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "3UoZCK2GAp3i6db8x4iXW4cUx4Fm7+mPya73wz25o1oHTvGc34QIc93xxuobUBRtnRMPmM+VxHrD6HA/3gJ/4Q==",
+  "success": true,
+  "projectFilePath": "/home/aaron/ia/ia.fsproj",
+  "expectedPackageFiles": [
+    "/home/aaron/.nuget/packages/fsharp.core/7.0.200/fsharp.core.7.0.200.nupkg.sha512"
+  ],
+  "logs": []
+}
