@@ -6,6 +6,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <!-- <Compile Include="Sudoku.fs" /> -->
+    <Compile Include="Pila.fs" />
+    <Compile Include="Cola.fs" />
+    <Compile Include="Busqueda.fs" />
+    <Compile Include="BFS.fs" />
+    <Compile Include="DFS.fs" />
+    <Compile Include="DFSL.fs" />
+    <Compile Include="IDS.fs" />
+    <Compile Include="CostoUniforme.fs" />
+    <Compile Include="Greedy.fs" />
+    <Compile Include="AStar.fs" />
+    <Compile Include="OchoCasillas.fs" />
+    <Compile Include="BusquedaGrafo.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
 
