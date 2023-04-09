@@ -1,12 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net7.0</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
-    <!-- <Compile Include="Sudoku.fs" /> -->
+    <Compile Include="Sudoku.fs" />
     <Compile Include="Pila.fs" />
     <Compile Include="Cola.fs" />
     <Compile Include="Busqueda.fs" />
@@ -21,5 +19,4 @@
     <Compile Include="BusquedaGrafo.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
-
 </Project>
