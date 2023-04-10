@@ -57,6 +57,7 @@ let main() =
             solveSudoku board row (col + 1) // Si la casilla ya tiene un número, pasar a la siguiente casilla
         else
             // Casilla vacía encontrada, probar números del 1 al 9
+            let mutable result = false // Se utiliza mutable para almacenar el resultado de la recursión
             for num in 1 .. 9 do
                 if isValid board row col num then
                     // Si el número es válido, se coloca en la casilla
@@ -64,28 +65,41 @@ let main() =
 
                     // Se llama recursivamente a la función para seguir probando
                     if solveSudoku board row (col + 1) then
-                        true // Si se resuelve el sudoku, retornar verdadero
+                        // Si se resuelve el sudoku, se actualiza el resultado y se sale del bucle
+                        result <- true
                     else
                         // Si la recursión no lleva a una solución, se retrocede y se borra el número
                         board.[row].[col] <- 0
-                        false
 
-            false // Si no se encontró ninguna solución, retornar falso
+            result // Se retorna el resultado de la recursión al final de la función
+
 
 
     // Ejemplo de uso
     let sudokuBoard =
+        // [|
+        //     [| 2; 5; 8; 7; 3; 6; 9; 4; 1 |]
+        //     [| 6; 1; 9; 8; 2; 4; 3; 5; 7 |]
+        //     [| 4; 3; 7; 9; 1; 5; 2; 6; 8 |]
+        //     [| 3; 9; 5; 2; 7; 1; 4; 8; 6 |]
+        //     [| 7; 6; 2; 4; 9; 8; 1; 3; 5 |]
+        //     [| 8; 4; 1; 6; 5; 3; 7; 2; 9 |]
+        //     [| 1; 8; 4; 3; 6; 9; 5; 7; 2 |]
+        //     [| 5; 7; 6; 1; 4; 2; 8; 9; 3 |]
+        //     [| 9; 2; 3; 5; 8; 7; 6; 1; 0 |] aqui nomas mecesita un 4
+        // |]
+
         [|
-            [| 2; 5; 8; 7; 3; 6; 9; 4; 1 |]
-            [| 6; 1; 9; 8; 2; 4; 3; 5; 7 |]
-            [| 4; 3; 7; 9; 1; 5; 2; 6; 8 |]
-            [| 3; 9; 5; 2; 7; 1; 4; 8; 6 |]
-            [| 7; 6; 2; 4; 9; 8; 1; 3; 5 |]
-            [| 8; 4; 1; 6; 5; 3; 7; 2; 9 |]
-            [| 1; 8; 4; 3; 6; 9; 5; 7; 2 |]
-            [| 5; 7; 6; 1; 4; 2; 8; 9; 3 |]
-            [| 9; 2; 3; 5; 8; 7; 6; 1; 0 |]
-        |]
+        [| 2; 5; 0; 0; 3; 0; 9; 0; 1 |]
+        [| 0; 1; 0; 0; 0; 4; 0; 0; 0 |]
+        [| 4; 0; 7; 0; 0; 0; 2; 0; 8 |]
+        [| 0; 0; 5; 2; 0; 0; 0; 0; 0 |]
+        [| 0; 0; 0; 0; 9; 8; 1; 0; 0 |]
+        [| 0; 4; 0; 0; 0; 3; 0; 0; 0 |]
+        [| 0; 0; 0; 3; 6; 0; 0; 7; 2 |]
+        [| 0; 7; 0; 0; 0; 0; 0; 0; 3 |]
+        [| 9; 0; 3; 0; 0; 0; 6; 0; 4 |]
+    |]
 
     // Función para imprimir el tablero del sudoku en la consola
     let printBoard (board:int[][]) =
