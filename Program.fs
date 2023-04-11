@@ -16,12 +16,14 @@ let readMultipleLines() =
             readLines (line2::acc)
     readLines []
 
-let main() =
-    // printfn "Enter multiple lines of text (press Enter on an empty line to finish):"
-    // let lines = readMultipleLines()
-    // printf "%A" lines
+let convertListToArray (input: int list list) : int[][] =
+    input
+    |> List.map (fun innerList -> innerList |> Array.ofList)
+    |> Array.ofList
 
-        // Función para verificar si un número es válido en una casilla del sudoku
+
+let main() =
+    // Función para verificar si un número es válido en una casilla del sudoku
     let rec isValid (board:int[][]) row col num =
         let mutable valid = true
 
@@ -46,7 +48,6 @@ let main() =
         // Si no se encontraron repeticiones, el número es válido
         valid
 
-    // Función para resolver el sudoku utilizando backtracking
     // Función para resolver el sudoku utilizando backtracking
     let rec solveSudoku (board:int[][]) row col =
         if row = 9 then
@@ -74,40 +75,16 @@ let main() =
             result // Se retorna el resultado de la recursión al final de la función
 
 
-
-    // Ejemplo de uso
-    let sudokuBoard =
-        // [|
-        //     [| 2; 5; 8; 7; 3; 6; 9; 4; 1 |]
-        //     [| 6; 1; 9; 8; 2; 4; 3; 5; 7 |]
-        //     [| 4; 3; 7; 9; 1; 5; 2; 6; 8 |]
-        //     [| 3; 9; 5; 2; 7; 1; 4; 8; 6 |]
-        //     [| 7; 6; 2; 4; 9; 8; 1; 3; 5 |]
-        //     [| 8; 4; 1; 6; 5; 3; 7; 2; 9 |]
-        //     [| 1; 8; 4; 3; 6; 9; 5; 7; 2 |]
-        //     [| 5; 7; 6; 1; 4; 2; 8; 9; 3 |]
-        //     [| 9; 2; 3; 5; 8; 7; 6; 1; 0 |] aqui nomas mecesita un 4
-        // |]
-
-        [|
-        [| 2; 5; 0; 0; 3; 0; 9; 0; 1 |]
-        [| 0; 1; 0; 0; 0; 4; 0; 0; 0 |]
-        [| 4; 0; 7; 0; 0; 0; 2; 0; 8 |]
-        [| 0; 0; 5; 2; 0; 0; 0; 0; 0 |]
-        [| 0; 0; 0; 0; 9; 8; 1; 0; 0 |]
-        [| 0; 4; 0; 0; 0; 3; 0; 0; 0 |]
-        [| 0; 0; 0; 3; 6; 0; 0; 7; 2 |]
-        [| 0; 7; 0; 0; 0; 0; 0; 0; 3 |]
-        [| 9; 0; 3; 0; 0; 0; 6; 0; 4 |]
-    |]
+    printfn "Dame el sudoku inicial:"
+    let lines = readMultipleLines()
+    let sudokuBoard = convertListToArray lines
 
     // Función para imprimir el tablero del sudoku en la consola
     let printBoard (board:int[][]) =
         for row in board do
-            printfn "%A" row
-
-    printfn "Sudoku inicial:"
-    printBoard sudokuBoard
+            for col in row do
+                printf "%i " col
+            printfn ""
 
     // Resolver el sudoku
     if solveSudoku sudokuBoard 0 0 then
