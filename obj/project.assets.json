@@ -1,8 +1,8 @@
 {
   "version": 3,
   "targets": {
-    "net7.0": {
-      "FSharp.Core/7.0.200": {
+    "net6.0": {
+      "FSharp.Core/6.0.7": {
         "type": "package",
         "compile": {
           "lib/netstandard2.1/FSharp.Core.dll": {
@@ -54,20 +54,29 @@
           "lib/netstandard2.1/zh-Hant/FSharp.Core.resources.dll": {
             "locale": "zh-Hant"
           }
+        },
+        "contentFiles": {
+          "contentFiles/any/any/_._": {
+            "buildAction": "None",
+            "codeLanguage": "any",
+            "copyToOutput": false
+          }
         }
       }
     }
   },
   "libraries": {
-    "FSharp.Core/7.0.200": {
-      "sha512": "NmgUnpNH6Zu9B0SPIhojyo38gnPdkdYFYQfbd6zosEH32kbGY/g/Klk7PfOWe1NAe/O1YOMmK9KhwQ2OWsWEbg==",
+    "FSharp.Core/6.0.7": {
+      "sha512": "e6wGrq5smV3Yk2fBE/Y0nBG5oFyF59k5Je0a0QDydUpg6liyaafGjD3xvutciKepCP2knspZ/sWViC/F1OyyQQ==",
       "type": "package",
-      "path": "fsharp.core/7.0.200",
+      "path": "fsharp.core/6.0.7",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "fsharp.core.7.0.200.nupkg.sha512",
+        "contentFiles/any/netstandard2.0/FSharp.Core.xml",
+        "contentFiles/any/netstandard2.1/FSharp.Core.xml",
+        "fsharp.core.6.0.7.nupkg.sha512",
         "fsharp.core.nuspec",
         "lib/netstandard2.0/FSharp.Core.dll",
         "lib/netstandard2.0/FSharp.Core.xml",
@@ -103,47 +112,47 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net7.0": [
-      "FSharp.Core >= 7.0.200"
+    "net6.0": [
+      "FSharp.Core >= 6.0.7"
     ]
   },
   "packageFolders": {
-    "/home/aaron/.nuget/packages/": {}
+    "C:\\Users\\180816\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/aaron/ia/ia.fsproj",
+      "projectUniqueName": "C:\\Users\\180816\\Desktop\\ia\\ia\\ia.fsproj",
       "projectName": "ia",
-      "projectPath": "/home/aaron/ia/ia.fsproj",
-      "packagesPath": "/home/aaron/.nuget/packages/",
-      "outputPath": "/home/aaron/ia/obj/",
+      "projectPath": "C:\\Users\\180816\\Desktop\\ia\\ia\\ia.fsproj",
+      "packagesPath": "C:\\Users\\180816\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\180816\\Desktop\\ia\\ia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/aaron/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\180816\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net7.0"
+        "net6.0"
       ],
       "sources": {
-        "/usr/share/dotnet/sdk/7.0.202/FSharp/library-packs": {},
+        "C:\\Program Files\\dotnet\\sdk\\6.0.405\\FSharp\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net7.0": {
-          "targetAlias": "net7.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "projectReferences": {}
         }
       }
     },
     "frameworks": {
-      "net7.0": {
-        "targetAlias": "net7.0",
+      "net6.0": {
+        "targetAlias": "net6.0",
         "dependencies": {
           "FSharp.Core": {
             "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
             "target": "Package",
-            "version": "[7.0.200, )",
+            "version": "[6.0.7, )",
             "generatePathProperty": true
           }
         },
@@ -163,7 +172,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.202/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.405\\RuntimeIdentifierGraph.json"
       }
     }
   }

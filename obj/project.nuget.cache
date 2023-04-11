@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "IUskjL60FlJ2q5VSQkiZ+ttK6EOQHhNj7FYYKPhIPIUXMi1r8B8lJNCgM+hKOvrokYtXpg4NdF40CXJAzkUuQg==",
+  "dgSpecHash": "WCeRsZD+2kO+7rKlVkRABcLNqQD/z6f+Su9MY61wJP32s2bfI2fvSBqXJO3UzIsAgXLJvIdJ7m3ihsF7D7D0CA==",
   "success": true,
-  "projectFilePath": "/home/aaron/ia/ia.fsproj",
+  "projectFilePath": "C:\\Users\\180816\\Desktop\\ia\\ia\\ia.fsproj",
   "expectedPackageFiles": [
-    "/home/aaron/.nuget/packages/fsharp.core/7.0.200/fsharp.core.7.0.200.nupkg.sha512"
+    "C:\\Users\\180816\\.nuget\\packages\\fsharp.core\\6.0.7\\fsharp.core.6.0.7.nupkg.sha512"
   ],
   "logs": []
 }
